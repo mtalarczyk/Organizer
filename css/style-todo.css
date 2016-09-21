@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.container{
+    width: 400px;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+.clearfix::before,.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+header{
+    -webkit-box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+}
+
+nav {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    background-color: #fff;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+nav p{
+    display: block;
+    float: left;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+nav p span{
+    color: #5EA1D4;
+}
+
+nav p em{
+    margin-left: 5px;
+    font-size: 12px;
+    color: #5EA1D4;
+}
+
+nav ul{
+    display: block;
+    float: right;
+    color: #5EA1D4;
+    font-weight: 700;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0 5px 0 0;
+    height: 30px;
+    width: 75px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: none;
+    width: 75px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:active, nav ul li a:hover{
+    color: #fff;
+}
+
+.navCalendar strong{
+    color: #00bfff;
+}
+
+.navContacts strong{
+    color: #eb4646;
+}
+
+.navToDo strong{
+    color: #eec111;
+}
+
+.navCalendar:active, .navCalendar:hover, .navCalendar:active a, .navCalendar:hover a, .navCalendar:active strong, .navCalendar:hover strong, .navContacts:active, .navContacts:hover, .navContacts:active a, .navContacts:hover a, .navContacts:active strong, .navContacts:hover strong, .navToDo:active, .navToDo:hover, .navToDo:active a, .navToDo:hover a, .navToDo:active strong, .navToDo:hover strong{
+    background-color: #5EA1D4;
+    color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.header, .footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background-color: #eec111;
+    border-radius: 15px 15px 0 0;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.footer{
+    border-radius: 0 0 15px 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    min-height: 500px;
+    border: 2px solid #eec111;
+    padding: 2px;
+    overflow: hidden; 
+}
+
+.addTask{
+    border: 2px solid #eec111;
+    width: 100%;
+    min-height: 100%;
+    max-height: 150px;
+}
+
+.addTaskHeader{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #eec111;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.addTaskMain{
+    margin-top: 2px;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 2px;
+    display: none;
+}
+
+.addTaskMain p{
+    display: block;
+    float: left;
+    background: #eec111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 2px;
+}
+
+.addTaskMain p:first-of-type{
+    padding-left: 4px;
+    padding-right: 6px;
+    width: 43px;
+}
+
+.addTaskMain p:last-of-type{
+    padding-left: 4px;
+    padding-right: 5px;
+    width: 62px;
+}
+
+.addTask input{
+    display: block;
+    float: left;
+    width: 200px;
+    border: 3px solid #eec111;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+    color: #eec111;
+    padding-left: 2px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.addTask input::-webkit-input-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+
+.addTask input:-moz-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+
+.addTask input:-ms-input-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+
+.addTask input:focus{
+    border: 2px solid #e4e4e4;
+}
+
+.addTask select{
+    display: block;
+    float: left;
+}
+
+select {
+    background: transparent;
+    border: 2px solid #eec111;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    color: #eec111;
+    height: 25px;
+    line-height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+#addTaskButton{
+    margin-left: 2px;
+    width: 40px;
+    height: 25px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.fail{
+    display: none;
+    color: #FF0000;
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid #FF0000;
+    width: 260px;
+    max-height: 50px;
+    margin: 5px 66px 5px 66px;
+    background-color: #FFE5E5;
+    border-radius: 10px;
+}
+
+.fail ul{
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.fail ul li{
+    text-align: left;
+    display: list-item;
+    list-style: none;
+}
+
+.taskToFinish{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eec111;
+    color: #fff;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 32px;
+}
+
+.taskToFinish span{
+    display: block;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #eec111;
+    background-color: #fff;
+    border-radius: 50px;
+    top: 4px;
+    right: 98px;
+}
+
+.btn{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    border: 2px solid #eec111;
+    text-align: center;
+    color: #fff;
+    background-color: #eec111;
+    padding: 0; 
+}
+
+.btn:active, .btn:hover {
+    background-color: #fff;
+    color: #eec111;
+}
+
+#removeFinishedTasksButton{
+    width: 100%;
+    height: 40px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+#taskList{
+    list-style: none;
+    width: 392px;
+    height: 366px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#taskList li{
+    display: block;
+    float: left;
+    position: relative;
+    border: 2px solid #eec111;
+    width: 379px;
+    min-height: 50px;
+    max-height: 100px;
+    margin-bottom: 5px;
+}
+
+#taskList li:first-of-type{
+    margin-top: 3px;
+}
+
+#taskList li p{
+    display: block;
+    width: 378px;
+}
+
+#taskList::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+#taskList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#taskList::-webkit-scrollbar-thumb {
+  background-color: #eec111;
+  outline: 1px solid #eec111;
+}
+
+
+.complete, .delete{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 24px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    border: 1px solid #eec111;
+    text-align: center;
+    color: #eec111;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.complete:active, .complete:hover, .delete:active, .delete:hover{
+    background-color: #eec111;
+    color: #ffffff;
+}
+
+.delete{
+    margin: 5px 0 2px 86px;
+}
+
+.complete{
+    margin: 5px 86px 2px 2px;
+}
+
+.done{
+    color: #BFBFBF;
+    border-color: #BFBFBF !important;
+}
+
+.done table tr{
+    color: #BFBFBF;
+    text-decoration: line-through;
+}
+
+.done table tr td:first-of-type p{
+    background-color: #BFBFBF;
+}
+
+.done div{
+    color: #cbcbcb;
+    border-color: #cbcbcb;
+    background-color: #fff;
+}
+
+.done div:link, .done div:visited{
+    color: #cbcbcb;
+    border-color: #cbcbcb;
+    background-color: #fff;
+}
+
+.done div:active, .done div:hover{
+    color: #fff;
+    border-color: #cbcbcb;
+    background-color: #cbcbcb;
+}
+
+.newTask{
+    display: block;
+    float: left;
+    width: 375px;
+    border-collapse: collapse;
+    border: none;
+    min-height: 40px;     
+}
+
+.newTask td:first-of-type{
+    width: 59px;
+    position: relative;
+}
+
+.newTask td:first-of-type p{
+    display: block !important;
+    position: absolute;
+    width: 32px !important;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+    top: 10px;
+    left: 10px;
+    margin: auto;
+}
+
+.newTask td:last-of-type{
+    width: 295px;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.newTask td:last-of-type p{
+    width: 320px !important;
+    text-align: left;
+    font-size: 16px;
+}
+
+.priority5{
+    background-color: #e50000;
+}
+
+.priority4{
+    background-color: #ffae19;
+}
+
+.priority3{
+    background-color: #149214;
+}
+
+.priority2{
+    background-color: #953ee4;
+}
+
+.priority1{
+    background-color: #0098CC;
+}

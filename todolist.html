@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+    <head>
+        <meta charset="UTF-8">
+        <title>To Do List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,700&subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style-todo.css"/>
+        <script src="./js/jquery-3.1.0.js"></script>
+        <script src="./js/app-todo.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="container clearfix">
+                <p><span>O</span>rganizer<em>just plan your day!</em></p>
+                <ul>GO TO
+                    <li class="navCalendar"><a href="./calendar.html"><strong>C</strong>alendar</a></li>
+                    <li class="navContacts"><a href="./contacts.html"><strong>C</strong>ontacs</a></li>
+                    <li class="navToDo"><a href="./todolist.html"><strong>T</strong>oDoList</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container clearfix">
+            <div class='header'>To Do List</div>
+        </section>
+        <section class="container clearfix">
+            <div class='main'>
+                <div class='addTask'>
+                    <div class="addTaskHeader">
+                        Add Task
+                    </div>
+                    <div class="fail">
+                        <strong>Invalid data!</strong>
+                        <ul>
+                            <li>Content of your task must be longer than 5 signs and shorter than 100 signs.</li>
+                        </ul>
+                    </div>
+                    <div class="addTaskMain">
+                        <p>Task: </p>
+                        <input id="taskInput" placeholder="Place your task here" maxlength="100" title="Min. length = 5, max. length = 100.">
+                        
+                        <p>Priority: </p>
+                        <select id="priority" value="5">
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+
+                        <div id="addTaskButton" class='btn'>Add</div>
+                    </div>
+                </div>
+                <p class="taskToFinish">Tasks to complete: <span id="counter"></span></p>
+
+                <ul id="taskList">
+
+                </ul>
+
+                <div id="removeFinishedTasksButton" class='btn'>Remove completed tasks</div>
+                
+            </div>
+    </section>
+    <footer class="container clearfix">
+        <div class='footer'>
+        Created by <a href='https://github.com/mtalarczyk' target="_blank">Michał Talarczyk &#169;</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,700&subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style-calendar.css"/>
+        <script src="./js/jquery-3.1.0.js"></script>
+        <script src="./js/app-calendar.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="container clearfix">
+                <p><span>O</span>rganizer<em>just plan your day!</em></p>
+                <ul>
+                    <li class="navCalendar"><a href="./calendar.html"><strong>C</strong>alendar</a></li>
+                    <li class="navContacts"><a href="./contacts.html"><strong>C</strong>ontacs</a></li>
+                    <li class="navToDo"><a href="./todolist.html"><strong>T</strong>oDoList</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container clearfix">
+            
+            <div class="prev">PREV</div>
+            <div class="month"></div>
+            <div class="next">NEXT</div>
+            
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Thuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><p></p></td>
+                    </tr>
+                </tbody>        
+            </table>
+            <div class="footer">Created by <a href='https://github.com/mtalarczyk' target="_blank">Michał Talarczyk &#169;</a></div>
+        </section>
+        <section>
+              <div class="create">
+                <p class="boxHeader">Create event</p>
+                <form method="post" id="newEventForm" class="createElements">
+                    <div class="main">
+                        <div class="fail">
+                            <strong>Invalid data!</strong>
+                            <ul>
+                                <li>Name: min. length = 5, max. length = 15</li>
+                                <li>Date: correct record - YYYY-MM-DD, e.g. 2015-06-30</li>
+                            </ul>
+                        </div>
+                    
+                        <label>Name:</label>
+                        <input id="name" type="text" name="name" maxlength="15" placeholder="Name of event (required)" title="Name of event (required)" autocomplete="on" required="required"><br>
+                        
+                        <label>Date:</label>
+                        <input id="date" type="date" name="date" maxlength="10" title="Date of event (required)" autocomplete="on" required="required">
+
+                        <label>Description:</label>
+                        <textarea id="description" maxlength="200" placeholder="Descrition (optional)" title="Descrition (optional)" autocomplete="on"></textarea>
+                    </div>
+                        <input type="submit" value="Apply" class="apply">
+                        <input type="button" value="Cancel" class="cancel">
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

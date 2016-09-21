@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    width: 800px;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+.clearfix::before,.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+.main{
+    display: block;
+    position: fixed;
+    width: 600px;
+    height: 380px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid #E5E5E5;
+    border-radius: 15px;
+}
+
+.main p:first-of-type{
+    display: block;
+    float: left;
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: left;
+    color: #000;
+    margin: 40px 48px 0 48px;
+}
+
+.main p:first-of-type span{
+    color: #5EA1D4;
+}
+
+.main p:last-of-type{
+    display: block;
+    float: left;
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: right;
+    color: #5EA1D4;
+    margin: 0 48px;
+}
+
+.box{
+    float: left;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.calendar{
+    background-color: #00bfff;
+    margin-left: 48px;
+}
+
+.contact{
+    background-color: #eb4646;
+    margin: 35px 25px 0 25px;
+}
+
+.todolist{
+    background-color: #eec111;
+    margin-right: 48px;
+}

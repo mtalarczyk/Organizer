@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    width: 400px;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+.clearfix::before,.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+header{
+    -webkit-box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 21px -13px rgba(0,0,0,0.75);
+}
+
+nav {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    background-color: #fff;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+nav p{
+    display: block;
+    float: left;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+nav p span{
+    color: #5EA1D4;
+}
+
+nav p em{
+    margin-left: 5px;
+    font-size: 12px;
+    color: #5EA1D4;
+}
+
+nav ul{
+    display: block;
+    float: right;
+    color: #5EA1D4;
+    font-weight: 700;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0 5px 0 0;
+    height: 30px;
+    width: 75px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: none;
+    width: 75px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:active, nav ul li a:hover{
+    color: #fff;
+}
+
+.navCalendar strong{
+    color: #00bfff;
+}
+
+.navContacts strong{
+    color: #eb4646;
+}
+
+.navToDo strong{
+    color: #eec111;
+}
+
+.navCalendar:active, .navCalendar:hover, .navCalendar:active a, .navCalendar:hover a, .navCalendar:active strong, .navCalendar:hover strong, .navContacts:active, .navContacts:hover, .navContacts:active a, .navContacts:hover a, .navContacts:active strong, .navContacts:hover strong, .navToDo:active, .navToDo:hover, .navToDo:active a, .navToDo:hover a, .navToDo:active strong, .navToDo:hover strong{
+    background-color: #5EA1D4;
+    color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.header, .footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background-color: #eb4646;
+    border-radius: 15px 15px 0 0;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.footer{
+    border-radius: 0 0 15px 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    min-height: 500px;
+    border: 2px solid #eb4646;
+    padding: 2px;
+    overflow: hidden; 
+}
+
+.addContact{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #eb4646;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.contactList{
+    list-style: none;
+    width: 392px;
+    height: 454px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contactList li{
+    display: block;
+    float: left;
+    border: 2px solid #eb4646;
+    width: 379px;
+    min-height: 30px;
+    max-height: 300px;
+    margin-bottom: 5px;
+}
+
+.contactList li:first-of-type{
+    margin-top: 3px;
+}
+
+.contactList::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+.contactList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.contactList::-webkit-scrollbar-thumb {
+  background-color: #eb4646;
+  outline: 1px solid #eb4646;
+}
+
+.newContactHeader, .newContactHeader:link, .newContactHeader:visited{
+    display: block;
+    width: 375px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #eb4646;
+    background-color: #fff;
+}
+
+.newContactHeader:active, .newContactHeader:hover{
+    color: #fff;
+    background-color: #eb4646;
+}
+
+.open, .open:link, .open:visited, .open:active, .open:hover{
+    color: #fff;
+    background-color: #eb4646;
+}
+
+.newContact{
+    display: none;
+    float: left;
+}
+
+.newContact table, .mainForm table{
+    margin: 2px 42px 0 43px; 
+    display: block;
+    float: left;
+    width: 290px;
+    border-collapse: collapse;
+    border: none;
+}
+
+.mainForm table{
+    margin: 2px 25px 0 25px;
+}
+
+.newContact table tr, .mainForm table tr{
+    overflow: hidden;
+}
+
+.newContact table tr td{
+    height: 25px;
+}
+
+.mainForm table tr td{
+    height: 35px;
+}
+
+.newContact table tr td:first-of-type, .mainForm table tr td:first-of-type{
+    width: 90px;
+}
+
+.newContact table tr td:last-of-type, .mainForm table tr td:last-of-type{
+    width: 200px;
+}
+
+.newContact div, .newContact div:link, .newContact div:visited{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 24px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    border: 1px solid #eb4646;
+    text-align: center;
+    color: #eb4646;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.newContact div:active, .newContact div:hover{
+    background-color: #eb4646;
+    color: #ffffff;
+}
+
+.newContact div:first-of-type{
+    margin: 5px 0 2px 86px;
+}
+
+.newContact div:last-of-type{
+    margin: 5px 86px 2px 2px;
+}
+
+.fullScreen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background:rgba(0,0,0,0.7);
+    display: none;  
+}
+
+.create{
+    position: fixed;
+    width: 340px;
+    height: 358px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    background:rgba(255,255,255,1);
+    border-radius: 5px;
+}
+
+.boxHeader{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    color: #ffffff;
+    background-color: #eb4646;
+    border-radius: 5px 5px 0 0;
+}
+
+.createElements{
+    width: 100%;
+    height: 330px;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    display: block;
+    float: left;
+    border-top: 0;
+    border-bottom: 0;
+    overflow: hidden;
+}
+
+.mainForm{
+    height: 282px;
+    width: 100%;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.mainForm input{
+    display: block;
+    float: left;
+    width: 200px;
+    border: 1px solid #eb4646;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+    color: #eb4646;
+}
+
+.mainForm input{
+    height: 25px;
+    line-height: 25;
+}
+
+.mainForm input::-webkit-input-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+.mainForm input:-moz-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+.mainForm input:-ms-input-placeholder{
+    opacity: 1;
+    color: #e4e4e4;
+}
+
+.mainForm input:focus {
+    border: 2px solid #eb4646;
+}
+
+label{
+    display: block;
+    float: left;
+    width: 90px;
+}
+
+.apply, .apply:link, .apply:visited, .cancel, .cancel:link, .cancel:visited {
+    display: block;
+    float: left;
+    width: 169px;
+    height: 35px;
+    background-color: #eb4646;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 4px;
+}
+
+.apply, .apply:link, .apply:visited{
+    border-radius: 0 0 0 5px;
+}
+
+.cancel, .cancel:link, .cancel:visited{
+    margin-left: 2px;
+    border-radius: 0 0 5px 0;
+}
+
+.apply:hover, .apply:active, .cancel:hover, .cancel:active {
+    display: block;
+    float: left;
+    width: 169px;
+    height: 35px;
+    border: 2px solid #eb4646;
+    background-color: #ffffff;
+    color: #eb4646;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 31px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fail{
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #FF0000;
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid #FF0000;
+    width: 260px;
+    max-height: 50px;
+    background-color: #FFE5E5;
+    border-radius: 10px;
+}
+
+.fail ul{
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.fail ul li{
+    text-align: left;
+    display: list-item;
+    list-style: none;
+}
+
+.form{
+    width: 100%;
+    height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    position: relative;
+}
