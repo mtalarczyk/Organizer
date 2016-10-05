@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var inputPhone = form.querySelector('#phone');
     var inputEmail = form.querySelector('#email');
     var inputDate = form.querySelector('#date');
-    var inputAdress = form.querySelector('#adress');
+    var inputAddress = form.querySelector('#address');
     var inputCity = form.querySelector('#city');
     var inputCountry = form.querySelector('#country');
     
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
         inputPhone.value = '';
         inputEmail.value = '';
         inputDate.value = '';
-        inputAdress.value = '';
+        inputAddress.value = '';
         inputCity.value = '';
         inputCountry.value = '';
     }
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(){
             li.appendChild(details);
         
             var table = document.createElement('table');
-            table.innerHTML= '<tr><td>Name:</td><td>'+newContact.name+'</td></tr><tr><td>Surname:</td><td>'+newContact.surname+'</td></tr><tr><td>Phone:</td><td>'+newContact.phone+'</td></tr><tr><td>E-mail:</td><td title="'+newContact.email+'">'+newContact.email+'</td></tr><tr><td>Date of birth:</td><td>'+newContact.dateOfBirth+'</td></tr><tr><td>Adress</td><td>'+newContact.adress+'</td></tr><tr><td>City</td><td>'+newContact.city+'</td></tr><tr><td>Country</td><td>'+newContact.country+'</td></tr>';
+            table.innerHTML= '<tr><td>Name:</td><td>'+newContact.name+'</td></tr><tr><td>Surname:</td><td>'+newContact.surname+'</td></tr><tr><td>Phone:</td><td>'+newContact.phone+'</td></tr><tr><td>E-mail:</td><td title="'+newContact.email+'">'+newContact.email+'</td></tr><tr><td>Date of birth:</td><td>'+newContact.dateOfBirth+'</td></tr><tr><td>Address</td><td>'+newContact.address+'</td></tr><tr><td>City</td><td>'+newContact.city+'</td></tr><tr><td>Country</td><td>'+newContact.country+'</td></tr>';
         
             details.appendChild(table);    
             
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 inputPhone.value = newContact.phone;
                 inputEmail.value = newContact.email;
                 inputDate.value = newContact.dateOfBirth;
-                inputAdress.value = newContact.adress;
+                inputAddress.value = newContact.address;
                 inputCity.value = newContact.city;
                 inputCountry.value = newContact.country;
             });
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function(){
         createItem(contacts[i])
       }
       renewID();
-    }, 100);
+    }, 500);
 
     addContact.addEventListener('click', function(){
         boxHeader.innerText = "Add contact";
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function(){
         var inputPhoneValue = inputPhone.value;
         var inputEmailValue = inputEmail.value;
         var inputDateValue = inputDate.value;
-        var inputAdressValue = inputAdress.value;
+        var inputAddressValue = inputAddress.value;
         var inputCityValue = inputCity.value;
         var inputCountryValue = inputCountry.value;
         
@@ -227,15 +227,15 @@ document.addEventListener("DOMContentLoaded", function(){
         } else if(inputEmailValue.length > 0 && ((inputEmailValue.indexOf('@') == -1) || (inputEmailValue.indexOf('.') == -1))){
             
             $(createError).fadeIn(500);
-            createErrorList.innerText = "Correct your adress e-mail.";
+            createErrorList.innerText = "Correct your address e-mail.";
             
         } else if(!checkdate(inputDateValue)){
             $(createError).fadeIn(500);
             createErrorList.innerText = "Check date. Correct format: YYYY-MM-DD";
             
-        } else if(inputAdressValue.length > 40){
+        } else if(inputAddressValue.length > 40){
             $(createError).fadeIn(500);
-            createErrorList.innerText = "Adress is too long. Maximum length: 40.";
+            createErrorList.innerText = "Address is too long. Maximum length: 40.";
                 
         } else if(inputCityValue.length > 30){
             $(createError).fadeIn(500);
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 phone: inputPhone.value,
                 email: inputEmail.value,
                 dateOfBirth: inputDate.value,
-                adress: inputAdress.value,
+                address: inputAddress.value,
                 city: inputCity.value,
                 country: inputCountry.value
             };

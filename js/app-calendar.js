@@ -163,7 +163,7 @@ for(var j = 0; j < firstCells.length; j++){
         return;
     }
     
-    setTimeout(createMonthView,100); //stworzenie aktualnego widoku miesiąca, opóźnienie wprowadzone celowo w celu możliwości odczytania z serwera wartości "events"
+    setTimeout(createMonthView,500); //stworzenie aktualnego widoku miesiąca, opóźnienie wprowadzone celowo w celu możliwości odczytania z serwera wartości "events"
     
     //sprawdzenie poprawności zapisanej daty
     function checkdate(newDate){

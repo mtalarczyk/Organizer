@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function(){
         createItem(tasks[i].task, tasks[i].priority, tasks[i].done)
       }
       renewID();
-    }, 100);
+    }, 500);
 
     addTask.addEventListener('click', function(){
         var taskValue = taskInput.value;
