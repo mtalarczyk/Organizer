@@ -15,4 +15,4 @@ While reviewing the project, you' ll notice that everyone can make changes. I’
  
 ## Preview
 For a better experience, see a [demo](http://talarczyk.hs1.linux.pl/organizer).
-![](#demo.png)
+![](https://raw.githubusercontent.com/mtalarczyk/Organizer/bfb19b0fa7af7b63e5d5484a105e713a1dd87ffc/demo.png)
