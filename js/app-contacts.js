@@ -321,6 +321,6 @@ document.addEventListener("DOMContentLoaded", function(){
     })
     
     menu.on('mouseleave', function(){
-        $(this).children().slideUp(500);
+        $(this).children().finish().slideUp(500);
     })
 });

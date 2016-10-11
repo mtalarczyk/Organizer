@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     $(box).on('mouseleave', function(){
-        $(this).animate({
+        $(this).finish().animate({
             width: '-=20px',
             height: '-=20px',
             'line-height': '-=20px',
